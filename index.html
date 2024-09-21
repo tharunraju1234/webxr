@@ -67,10 +67,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       arObject.visible = false;
       scene.addNode(arObject);
 
-      let flower = new Gltf2Node({url: 'https://cdn.jsdelivr.net/gh/tharunraju1234/trail@main/carbon_frame_bike/scene.gltf'});
+      let flower = new Gltf2Node({url: 'scene.gltf'});
       arObject.addNode(flower);
 
-      let reticle = new Gltf2Node({url: 'https://cdn.jsdelivr.net/gh/immersive-web/webxr-samples@main/media/gltf/reticle/reticle.gltf'});
+      let reticle = new Gltf2Node({url: 'reticle.gltf'});
       reticle.visible = false;
       scene.addNode(reticle);
       let reticleHitTestResult = null;
@@ -161,7 +161,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       const MAX_ANCHORED_OBJECTS = 30;
       let anchoredObjects = [];
       function addAnchoredObjectsToScene(anchor) {
-        let flower = new Gltf2Node({url: 'https://cdn.jsdelivr.net/gh/tharunraju1234/trail@main/carbon_frame_bike/scene.gltf'});
+        let flower = new Gltf2Node({url: 'scene.gltf'});
         scene.addNode(flower);
         anchoredObjects.push({
           anchoredObject: flower,
@@ -169,7 +169,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         });
 
         // For performance reasons if we add too many objects start
-        // removing the oldest ones to keep the scene complexity
+        // removing the oldest ones to keep the scene complexitye
         // from growing too much.
         if (anchoredObjects.length > MAX_ANCHORED_OBJECTS) {
           let objectToRemove = anchoredObjects.shift();
